@@ -8,7 +8,11 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>
+                    @if (Auth::check())
+                        {{Auth::user()->username}}
+                    @endif
+                </p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -37,24 +41,16 @@
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
-                    <span>Posts</span>
+                    <span>Exams</span>
                     <span class="pull-right-container">
-                  <span class="label label-primary pull-right">4</span>
+                  <i class="fa fa-angle-left pull-right"></i>
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> List</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> New</a></li>
+                    <li><a href="{{ route('exams.index') }}"><i class="fa fa-circle-o"></i> List</a></li>
+                    <li><a href="{{ route('exams.create') }}"><i class="fa fa-circle-o"></i> New</a></li>
                     <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Categories</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="pages/widgets.html">
-                    <i class="fa fa-th"></i> <span>Widgets</span>
-                    <span class="pull-right-container">
-                  <small class="label pull-right bg-green">new</small>
-                </span>
-                </a>
             </li>
             <li class="treeview">
                 <a href="#">
@@ -65,36 +61,19 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Lists</a></li>
+                    <li><a href="{{ route('profiles.index') }}"><i class="fa fa-circle-o"></i> Lists</a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-laptop"></i>
-                    <span>UI Elements</span>
+                    <i class="fa fa-edit"></i> <span>Incomplete Sentences</span>
                     <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                    <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                    <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                    <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                    <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                    <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i> <span>Forms</span>
-                    <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                    <li><a href="{{ route('incompletesentences.index') }}"><i class="fa fa-circle-o"></i> Lists</a></li>
+                    <li><a href="{{ route('incompletesentences.create') }}"><i class="fa fa-circle-o"></i> New</a></li>
                     <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
                 </ul>
             </li>

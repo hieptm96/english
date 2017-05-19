@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $user = Sentinel::register(array(
+            'username' => 'taka2412',
             'email'    => 'admin@gmail.com',
             'password' => 'hiep12',
         ));
