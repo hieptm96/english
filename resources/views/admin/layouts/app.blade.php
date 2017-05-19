@@ -11,7 +11,7 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
         <!-- Scripts -->
         <script>
@@ -128,7 +128,7 @@
     <!-- ./wrapper -->
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
+        <!-- <script src="{{ asset('js/app.js') }}"></script> -->
         <!-- jQuery 2.2.3 -->
         <script src="{{ URL::to('/') }}/plugins/jQuery/jquery-2.2.3.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
@@ -140,7 +140,7 @@
         <!-- Bootstrap 3.3.6 -->
         <script src="{{ URL::to('/') }}/bootstrap/js/bootstrap.min.js"></script>
         <!-- Morris.js charts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="{{ URL::to('/') }}/cdn/raphael-min.js"></script>
         <script src="{{ URL::to('/') }}/plugins/morris/morris.min.js"></script>
         <!-- Sparkline -->
         <script src="{{ URL::to('/') }}/plugins/sparkline/jquery.sparkline.min.js"></script>
